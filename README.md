@@ -1,6 +1,5 @@
-# Creality Helper Script
+# Creality Helper Script for CR-10 SE
 
-<img width="1102" src="https://github.com/Guilouz/Creality-K1-Series/blob/main/docs/assets/img/home/home.png">
 
 ## Wiki
 
