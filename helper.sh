@@ -6,7 +6,6 @@ clear
 HELPER_SCRIPT_FOLDER="$( cd "$( dirname "${0}" )" && pwd )"
 for script in "${HELPER_SCRIPT_FOLDER}/scripts/"*.sh; do . "${script}"; done
 for script in "${HELPER_SCRIPT_FOLDER}/scripts/menu/"*.sh; do . "${script}"; done
-for script in "${HELPER_SCRIPT_FOLDER}/scripts/menu/KE/"*.sh; do . "${script}"; done
 
 function update_helper_script() {
   echo -e "${white}"
