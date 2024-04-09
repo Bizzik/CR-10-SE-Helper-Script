@@ -41,7 +41,7 @@ function fw_version() {
 
 function main_menu_ui() {
   top_line
-  title "• HELPER SCRIPT FOR CREALITY $(script_title)•" "${blue}"
+  title "• HELPER SCRIPT FOR CREALITY $(script_title) •" "${blue}"
   title "Copyright © Cyril Guislain (Guilouz)" "${white}"
   title "Script modified by Robin Hellberg (Bizzik)" "${white}"
   inner_line

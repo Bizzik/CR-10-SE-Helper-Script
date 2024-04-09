@@ -37,23 +37,11 @@ function install_screws_tilt_adjust(){
         fi
         echo
         local printer_choice
-        while true; do
-          read -p " ${white}Do you want install it for ${yellow}K1${white} or ${yellow}K1 Max${white}? (${yellow}k1${white}/${yellow}k1max${white}): ${yellow}" printer_choice
-          case "${printer_choice}" in
-            K1|k1)
-              echo -e "${white}"
-              echo -e "Info: Linking files..."
-              ln -sf "$SCREWS_ADJUST_K1_URL" "$HS_CONFIG_FOLDER"/screws-tilt-adjust.cfg
-              break;;
-            K1MAX|k1max)
-              echo -e "${white}"
-              echo -e "Info: Linking files..."
-              ln -sf "$SCREWS_ADJUST_K1M_URL" "$HS_CONFIG_FOLDER"/screws-tilt-adjust.cfg
-              break;;
-            *)
-              error_msg "Please select a correct choice!";;
-          esac
-        done
+		while true; do
+			echo -e "${white}Info: Linking files..."
+			ln -sf "$SCREWS_ADJUST_K1_URL" "$HS_CONFIG_FOLDER"/screws-tilt-adjust.cfg
+			break
+		done
         ln -sf "$SCREWS_ADJUST_URL" "$KLIPPER_EXTRAS_FOLDER"/screws_tilt_adjust.py
         if grep -q "include Helper-Script/screws-tilt-adjust" "$PRINTER_CFG" ; then
           echo -e "Info: Screws Tilt Adjust Support configurations are already enabled in printer.cfg file..."
