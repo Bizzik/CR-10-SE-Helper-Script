@@ -22,7 +22,7 @@ function update_available() {
   [[ ! -d "${HELPER_SCRIPT_FOLDER}/.git" ]] && return
   local remote current
   cd "${HELPER_SCRIPT_FOLDER}"
-  ! git branch -a | grep -q "\* alpha" && return
+  ! git branch -a | grep -q "\* main" && return
   git fetch -q > /dev/null 2>&1
   remote=$(git rev-parse --short=8 FETCH_HEAD)
   current=$(git rev-parse --short=8 HEAD)
