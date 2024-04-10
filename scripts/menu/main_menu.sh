@@ -2,7 +2,7 @@
 
 set -e
 
-if /usr/bin/get_sn_mac.sh model 2>&1 | grep -iq "K1"; then K1=1; else K1=1; fi
+if /usr/bin/get_sn_mac.sh model 2>&1 | grep -iq "K1"; then K1=1; else K1=0; fi
 
 function get_script_version() {
   local version
@@ -32,17 +32,18 @@ function script_title() {
 function fw_version() {
   local firmware
   if [ $K1 -eq 0 ]; then
-    firmware="1.1.0.12"
+    firmware="1.1.0.27"
   else
-    firmware="1.3.3.5"
+    firmware="1.1.0.27"
   fi
   echo "${firmware}"
 }
 
 function main_menu_ui() {
   top_line
-  title "• HELPER SCRIPT FOR CREALITY $(script_title) SERIES •" "${blue}"
+  title "• HELPER SCRIPT FOR CREALITY $(script_title) •" "${blue}"
   title "Copyright © Cyril Guislain (Guilouz)" "${white}"
+  title "Script modified by Robin Hellberg (Bizzik)" "${white}"
   inner_line
   title "/!\\ ONLY USE IT WITH FIRMWARE $(fw_version) AND ABOVE /!\\" "${darkred}"
   inner_line
